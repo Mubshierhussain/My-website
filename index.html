@@ -14,14 +14,10 @@ body{
 }
 
 h1{
-    color:#00ffff;
-    font-size:50px;
-    text-shadow:
-        0 0 5px #00ffff,
-        0 0 10px #00ffff,
-        0 0 20px #00ffff,
-        0 0 40px #00ffff;
-    animation:neon 1.5s infinite alternate;
+ font-size:50px;
+    font-weight:bold;
+    text-align:center;
+    animation: rainbow 3s infinite;
 }
 
 img{
@@ -69,7 +65,37 @@ img:hover{
         transform:translateY(0px);
     }
 }
+@keyframes rainbow{
+    0%{
+        color:red;
+        text-shadow:0 0 10px red;
+    }
 
+    20%{
+        color:orange;
+        text-shadow:0 0 10px orange;
+    }
+
+    40%{
+        color:yellow;
+        text-shadow:0 0 10px yellow;
+    }
+
+    60%{
+        color:lime;
+        text-shadow:0 0 10px lime;
+    }
+
+    80%{
+        color:cyan;
+        text-shadow:0 0 10px cyan;
+    }
+
+    100%{
+        color:magenta;
+        text-shadow:0 0 10px magenta;
+    }
+}
 </style>
 
 </head>
