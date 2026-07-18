@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>😎 Mannu's Photo Gallery 📸</title>
+<title>😎 Mannu's Photo Gallery 📸</title>
 
-    <style>
-        body{
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #89f7fe);
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
 
-        h1{
-            color: white;
-            font-size: 42px;
-            text-shadow: 2px 2px 8px black;
-            animation: glow 2s infinite;
-        }
+body{
+    background: linear-gradient(135deg, red, orange, yellow, green, cyan, blue, purple);
+    text-align:center;
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:20px;
+}
 
-        img{
-            width: 250px;
-            border-radius: 20px;
-            margin: 10px;
-            box-shadow: 0 0 15px white;
-            transition: 0.3s;
-            animation: float 3s ease-in-out infinite;
-        }
+h1{
+    color:#00ffff;
+    font-size:50px;
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+    animation:neon 1.5s infinite alternate;
+}
 
-        img:hover{
-            transform: scale(1.1);
-        }
+img{
+    width:250px;
+    margin:12px;
+    border-radius:20px;
+    box-shadow:0 0 20px white;
+    transition:0.4s;
+    animation:float 3s ease-in-out infinite;
+}
 
-        @keyframes glow{
-            0%{color:white;}
-            50%{color:yellow;}
-            100%{color:white;}
-        }
+img:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 35px yellow;
+}
 
-        @keyframes float{
-            0%{transform:translateY(0);}
-            50%{transform:translateY(-10px);}
-            100%{transform:translateY(0);}
-        }
-    </style>
+@keyframes neon{
+    from{
+        text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+    }
+
+    to{
+        text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+</style>
 
 </head>
 
