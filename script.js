@@ -21,3 +21,48 @@ alert("✨ Welcome to Mannu's Professional Website! ✨");
 });
 
 });
+/* ===== Typing Animation ===== */
+
+const text = [
+  "Web Developer 💻",
+  "HTML & CSS Learner 🚀",
+  "GitHub Portfolio Creator 🌐",
+  "Welcome To My Website ❤️"
+];
+
+let index = 0;
+let charIndex = 0;
+let typing = true;
+
+const typingText = document.getElementById("typing-text");
+
+function typeEffect() {
+
+  if (!typingText) return;
+
+  if (typing) {
+
+    typingText.textContent = text[index].substring(0, charIndex++);
+    
+    if (charIndex > text[index].length) {
+      typing = false;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+
+  } else {
+
+    typingText.textContent = text[index].substring(0, charIndex--);
+
+    if (charIndex < 0) {
+      typing = true;
+      index = (index + 1) % text.length;
+    }
+
+  }
+
+  setTimeout(typeEffect, typing ? 100 : 60);
+
+}
+
+typeEffect();
